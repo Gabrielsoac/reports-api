@@ -1,0 +1,36 @@
+package com.unafiber.report.core.DTOs;
+
+import java.time.LocalDate;
+
+public record ReportResponseDTO(
+                                LocalDate date,
+                                Integer day_week,
+                                Double link_jadson_consumo,
+                                Double link_df_consumo,
+                                Double link_formosa_consumo,
+                                Integer clients_online,
+                                Integer clients_offline,
+                                Integer clients_blocked,
+                                Boolean status_ar_is_ok,
+                                Boolean switch_huawei_core_is_ok,
+                                Boolean switch_datacom_link_is_ok,
+                                Boolean bgp_is_ok,
+                                Boolean concentrador_is_ok,
+                                Boolean backup_server_is_ok,
+                                Boolean a10_is_ok,
+                                Boolean fonte1_is_ok,
+                                Boolean fonte2_is_ok,
+                                Boolean fonte3_is_ok,
+                                Boolean quadro1_is_ok,
+                                Boolean quadro2_is_ok,
+                                Boolean quadro3_is_ok,
+                                Boolean inversora_is_ok,
+                                Boolean oltc300_is_ok,
+                                Boolean oltc650_is_ok,
+                                String whatsapp_status,
+                                Boolean system_manager_is_ok,
+                                Boolean site_is_ok,
+                                Boolean voip_is_ok,
+                                Integer devices_ont,
+                                Integer devices_local) {
+}

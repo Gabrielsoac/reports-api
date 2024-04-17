@@ -24,6 +24,7 @@ public class ReportController {
         ReportResponseListOnlyDateDTO reportList = reportRepositoryService.findAllReports();
         return ResponseEntity.ok(reportList);
     }
+
     /*
     @GetMapping
     public ResponseEntity<ReportResponseListDTO> getAllRelatorios() {
@@ -38,7 +39,7 @@ public class ReportController {
     }
 
     @PostMapping
-    public ResponseEntity<ReportDateDTO> saveRelatorio(@RequestBody ReportRequestDTO data) {
+    public ResponseEntity<ReportDateDTO> saveReport(@RequestBody ReportRequestDTO data) {
         Report newReport = new Report(data);
         ReportDateDTO report = reportRepositoryService.SaveReport(newReport);
         return ResponseEntity.ok(report);
@@ -46,8 +47,14 @@ public class ReportController {
 
     @DeleteMapping("/{date}")
     @Transactional
-    public ResponseEntity deleteRelatorioByDate(@PathVariable LocalDate date) {
+    public ResponseEntity deleteReportByDate(@PathVariable LocalDate date) {
         reportRepositoryService.deleteReportByDate(date);
         return ResponseEntity.ok("Deleted!");
     }
+
+    /*
+    @PutMapping
+    public ResponseEntity<> updateReport(@RequestBody ReportRequestDTO data) {
+
+    } */
 }

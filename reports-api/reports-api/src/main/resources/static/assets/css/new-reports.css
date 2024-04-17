@@ -1,0 +1,77 @@
+
+.form-reports-container{
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+
+    
+}
+
+
+.form-reports{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+
+    font-size: 1.5rem;
+
+}
+
+
+
+fieldset {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px;
+    border: 1px solid gray;
+    column-gap: 50px;
+}
+
+.reports-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.reports-input input, .reports-input select{
+    width: 200px;
+    height: 2rem;
+    text-align: left;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.reports-input option {
+    color: black;
+}
+
+.btnSend {
+    color: black;
+    align-self: center;
+    width: 50%;
+    padding: 20px;
+     
+    border-radius: 20px;
+    border: none;
+    font-size: 1vw;
+}
+
+.btnSend:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+

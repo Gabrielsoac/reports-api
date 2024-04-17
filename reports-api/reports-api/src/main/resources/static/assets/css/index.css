@@ -1,0 +1,165 @@
+.logo {
+    width: 100%;
+    padding: 20px 2rem;
+    position: absolute;
+    left: 0;
+}
+
+.logo img{
+    width: 10%;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+
+.first-view {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10rem 2rem;
+    gap: 20px;
+
+}
+
+.new-reports {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgb(54, 71, 137);
+    gap: 20px;
+}
+
+.new-reports a, a:visited, a:active {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.new-reports a:hover {
+    color: white;
+    background-color: rgb(38, 116, 18);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
+.search-reports-container{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 5px 5px 5px black;
+    background-color: rgb(54, 71, 137);
+}
+
+
+
+.search-reports {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    
+}
+
+.date label, input {
+    font-size: 1.5rem;
+}
+
+.date input {
+    font-size: 1.5rem;
+    color: black;
+
+}
+
+.search-reports button {
+    padding: 10px 20px;
+    font-size: large;
+    font-weight: 400;
+    border-radius: 20px;
+    color: black;
+    border: none;
+
+
+}
+
+
+.search-reports button:hover {
+    color: white;
+    background-color: rgb(38, 116, 18);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.reports-list {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgb(54, 71, 137);
+    
+}
+
+
+ .reports-list tr, .reports-list td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.reports-list thead td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: gray;
+}
+
+.icon-reports-delete:hover {
+    cursor: pointer;
+    transform: scale(1.2);    
+    color: red;
+}
+
+.icon-reports-editor:hover {
+    cursor: pointer;
+    transform: scale(1.2);    
+    color: red;
+}
+
+
+#reports-result {
+    display: none;
+}
+
+
+.td-reports-api, .td-reports-api {
+    padding: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid gray ;
+}
+
+

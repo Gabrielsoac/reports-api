@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste api</title>
+    
+
+    <script src="https://kit.fontawesome.com/abe42b26ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/var.css">
+    <link rel="shortcut icon" href="assets/img/UNAFIBER_LOGO.png" type="image/x-icon">
+
+
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="assets/img/UNAFIBER_LOGO.png" alt="">
+        </div>
+    </nav>
+   
+    <div class="first-view">
+
+        <div class="new-reports">
+            <h1 class="title">Inserir novo relatorio?</h1>
+            <a href="http://localhost:8080/new-report">Criar Relatorio</a>
+        </div>
+
+
+        <div class="search-reports-container">
+    
+            <form class="search-reports" onsubmit="searchReport(event)">
+                <h2 class="title">Buscar relatorio por data</h2>
+                <div class="date">
+                    <label for="date">Data:</label>
+                    <input type="date" name="date" id="date">
+                </div>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <div class="reports-list">
+            <h2 class="title">Ultimo relatorio</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Date</td>
+                        <td>Opções</td>
+                    </tr>
+                </thead>
+                <tbody id="last-report">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <table id="reports-result">
+        <thead>
+            <tr class="tr-reports-api">
+                <td class="td-reports-api"><strong>Chave</strong></td>
+                <td class="td-reports-api"><strong>Valor</strong></td>
+            </tr>
+        </thead>
+
+        <tbody id="reports">
+
+        </tbody>
+
+    </table>
+
+    
+
+    <script src="assets/scripts/index.js"></script>
+</body>
+</html>

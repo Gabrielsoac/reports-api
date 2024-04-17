@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-report</title>
+    <link rel="stylesheet" href="assets/css/var.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/new-reports.css">
+    <link rel="shortcut icon" href="assets/img/UNAFIBER_LOGO.png" type="image/x-icon">
+</head>
+<body> 
+    <nav>
+        <div class="logo">
+            <a href="http://localhost:8080/home"><img src="assets/img/UNAFIBER_LOGO.png" alt=""></a>
+        </div>
+    </nav>
+
+    <div class="form-reports-container">
+        <form id="form-reports" class="form-reports" action="" onsubmit="newReports(event)">
+            <fieldset>
+                <legend>Cadastro de relatorio</legend>
+                <div class="reports-input">
+                    <label for="day_week">Dia da Semana</label>
+                    <select name="day_week" id="day_week">
+                        <option value="1">Domingo</option>
+                        <option value="2">Segunda</option>
+                        <option value="3">Terça</option>
+                        <option value="4">Quarta</option>
+                        <option value="5">Quinta</option>
+                        <option value="6">Sexta</option>
+                        <option value="7">Sabado</option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="link_jadson_consumo">Consumo Jadson</label>
+                    <input type="text" id="link_jadson_consumo" name="link_jadson_consumo">
+                </div>
+                <div class="reports-input">
+                    <label for="link_df_consumo">Consumo DF</label>
+                    <input type="text" id="link_df_consumo" name="link_df_consumo">
+                </div>
+                <div class="reports-input">
+                    <label for="link_formosa_consumo">Consumo Formosa</label>
+                    <input type="text" id="link_formosa_consumo" name="link_formosa_consumo">
+                </div>
+                <div class="reports-input">
+                    <label for="clients_online">Clientes Online</label>
+                    <input type="text" id="clients_online" name="clients_online">
+                </div>
+                <div class="reports-input">
+                    <label for="clients_offline">Clientes Offline</label>
+                    <input type="text" id="clients_online" name="clients_offline">
+                </div>
+                <div class="reports-input">
+                    <label for="clients_blocked">Clientes bloqueados</label>
+                    <input type="text" id="clients_blocked" name="clients_blocked">
+                </div>
+                <div class="reports-input">
+                    <label for="status_ar_is_ok">Ar-Condicionado</label>
+                    <select id="status_ar_is_ok" name="status_ar_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                      </select>
+                </div>
+                <div class="reports-input">
+                    <label for="switch_huawei_core_is_ok">Switch Huawei</label> 
+                    <select id="switch_huawei_core_is_ok" name="switch_huawei_core_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+
+                <div class="reports-input">
+                    <label for="switch_datacom_link_is_ok">Datacon</label>
+                    <select id="switch_datacom_link_is_ok" name="switch_datacom_link_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="bgp_is_ok">BGP</label>
+                    <select id="bgp_is_ok" name="bgp_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="concentrador_is_ok">Concentrador</label>
+                    <select id="concentrador_is_ok" name="concentrador_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="backup_server_is_ok">Servidor Backup</label>
+                    <select id="backup_server_is_ok" name="backup_server_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="a10_is_ok">A10</label>
+                    <select id="a10_is_ok" name="a10_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="fonte1_is_ok">Fonte 1</label>
+                    <select id="fonte1_is_ok" name="fonte1_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="fonte2_is_ok">Fonte 2</label>
+                    <select id="fonte2_is_ok" name="fonte2_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="fonte3_is_ok">Fonte 3</label>
+                    <select id="fonte3_is_ok" name="fonte3_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="quadro1_is_ok">Quadro 1</label>
+                    <select id="quadro1_is_ok" name="quadro1_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="quadro2_is_ok">Quadro 2</label>
+                    <select id="quadro2_is_ok" name="quadro2_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="quadro3_is_ok">Quadro 3</label>
+                    <select id="quadro3_is_ok" name="quadro3_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="inversora_is_ok">Inversora</label>
+                    <select id="inversora_is_ok" name="inversora_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="oltc300_is_ok">OLT C300</label>
+                    <select id="oltc300_is_ok" name="oltc300_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="oltc650_is_ok">OLT C650</label>
+                    <select id="oltc650_is_ok" name="oltc650_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="whatsapp_status">Status Whatsapp</label>
+                    <input type="text" id="whatsapp_status" name="whatsapp_status">
+                    <!-- <select id="whatsapp_status" name="whatsapp_status">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select> -->
+                </div>
+                <div class="reports-input">
+                    <label for="system_manager_is_ok">Hubsoft</label>
+                    <select id="system_manager_is_ok" name="system_manager_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="site_is_ok">Site Unafiber</label>
+                    <select id="site_is_ok" name="site_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="voip_is_ok">Voip</label>
+                    <select id="voip_is_ok" name="voip_is_ok">
+                        <option value="true">Ok</option>
+                        <option value="false">Com Problemas<option>
+                    </select>
+                </div>
+                <div class="reports-input">
+                    <label for="devices_ont">ONTs gerenciados</label>
+                    <input type="text"  id="devices_ont" name="devices_ont">
+                </div>
+                <div class="reports-input">
+                    <label for="devices_local">Ztes gerenciados</label>
+                    <input type="text" id="devices_local" name="devices_local">
+                </div>
+            </fieldset>
+
+            <button id="btnSend" class="btnSend" type="submit">Enviar</button>
+
+        </form>
+    </div>
+
+    <script src="assets/scripts/index.js"></script>
+</body>
+</html>

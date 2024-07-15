@@ -3,5 +3,6 @@ CREATE TABLE report (
     date DATE NOT NULL,
     title VARCHAR(255) NOT NULL,
     author VARCHAR(255) NOT NULL,
-    description TEXT NOT NULL
+    description TEXT NOT NULL,
+    edited BOOLEAN DEFAULT FALSE
 );

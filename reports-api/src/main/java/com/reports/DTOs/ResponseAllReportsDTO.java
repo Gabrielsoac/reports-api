@@ -2,5 +2,5 @@ package com.reports.DTOs;
 
 import java.util.List;
 
-public record AllReportsDTO(List<ReportResponseDTO> reportList) {
+public record ResponseAllReportsDTO(List<ResponseReportDTO> reportList) {
 }

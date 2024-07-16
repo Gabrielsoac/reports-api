@@ -2,5 +2,5 @@ package com.reports.DTOs;
 
 import java.time.LocalDate;
 
-public record DateAndTitleRequestReportDTO(LocalDate date, String title){
+public record RequestDateAndTitleReportDTO(LocalDate date, String title){
 }

@@ -33,8 +33,9 @@ public class ReportService {
 
     public AllReportsDTO findAllReports(){
 
-        List<Report> reportList = reportRepository.findAll();
-
+        List<ReportResponseDTO> reportList = reportRepository
+                .findAll()
+                .stream().map((x) -> new ReportResponseDTO(x.getDate(), x.getTitle(), x.getAuthor(), x.getDescription())).toList();
         return new AllReportsDTO(reportList);
     }
 
@@ -50,8 +51,8 @@ public class ReportService {
 
     }
 
-    public void removeReport(LocalDate date, String title){
-        reportRepository.delete(findReportByDateAndTitle(date, title));
+    public void removeReport(DateAndTitleRequestReportDTO data){
+        reportRepository.delete(findReportByDateAndTitle(data.date(), data.title()));
     }
 
     private Report findReportByDateAndTitle(LocalDate date, String title){

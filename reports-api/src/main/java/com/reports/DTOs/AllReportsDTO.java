@@ -1,8 +1,6 @@
 package com.reports.DTOs;
 
-import com.reports.model.entities.Report;
-
 import java.util.List;
 
-public record AllReportsDTO(List<Report> reportList) {
+public record AllReportsDTO(List<ReportResponseDTO> reportList) {
 }

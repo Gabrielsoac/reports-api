@@ -18,28 +18,28 @@ public class ReportService {
 
     private final ReportRepository reportRepository;
 
-    public ReportResponseDTO createReport(RequestReportDataDTO data){
+    public ResponseReportDTO createReport(RequestReportDataDTO data){
         Report newReport = new Report(data);
         reportRepository.save(newReport);
-        return new ReportResponseDTO(newReport.getDate(), newReport.getTitle(), newReport.getAuthor(), newReport.getDescription());
+        return new ResponseReportDTO(newReport.getDate(), newReport.getTitle(), newReport.getAuthor(), newReport.getDescription(), newReport.getEdited());
     }
 
-    public ReportResponseDTO findReport(LocalDate date, String title){
+    public ResponseReportDTO findReport(LocalDate date, String title){
 
         Report report = findReportByDateAndTitle(date, title);
 
-        return new ReportResponseDTO(report.getDate(), report.getTitle(), report.getAuthor(), report.getDescription());
+        return new ResponseReportDTO(report.getDate(), report.getTitle(), report.getAuthor(), report.getDescription(), report.getEdited());
     }
 
-    public AllReportsDTO findAllReports(){
+    public ResponseAllReportsDTO findAllReports(){
 
-        List<ReportResponseDTO> reportList = reportRepository
+        List<ResponseReportDTO> reportList = reportRepository
                 .findAll()
-                .stream().map((x) -> new ReportResponseDTO(x.getDate(), x.getTitle(), x.getAuthor(), x.getDescription())).toList();
-        return new AllReportsDTO(reportList);
+                .stream().map((x) -> new ResponseReportDTO(x.getDate(), x.getTitle(), x.getAuthor(), x.getDescription(), x.getEdited())).toList();
+        return new ResponseAllReportsDTO(reportList);
     }
 
-    public ReportResponseEditDTO editReport(RequestEditReportDTO data){
+    public ResponseReportEditDTO editReport(RequestEditReportDTO data){
 
         Report report = findReportByDateAndTitle(data.date(), data.title());
         report.setTitle(data.title());
@@ -47,11 +47,10 @@ public class ReportService {
         report.setAuthor(data.author());
         report.setEdited(true);
 
-        return new ReportResponseEditDTO(report.getDate(), report.getTitle(), report.getAuthor(), report.getDescription(), report.getEdited());
-
+        return new ResponseReportEditDTO(report.getDate(), report.getTitle(), report.getAuthor(), report.getDescription(), report.getEdited());
     }
 
-    public void removeReport(DateAndTitleRequestReportDTO data){
+    public void removeReport(RequestDateAndTitleReportDTO data){
         reportRepository.delete(findReportByDateAndTitle(data.date(), data.title()));
     }
 
